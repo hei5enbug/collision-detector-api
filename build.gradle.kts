@@ -22,6 +22,7 @@ dependencies {
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.1")
 	implementation("org.jetbrains.kotlin:kotlin-reflect:1.6.0")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.0")
+	implementation ("com.github.ulisesbocchio:jasypt-spring-boot-starter:3.0.4")
 	runtimeOnly("org.postgresql:postgresql:42.3.2")
 	testImplementation("org.springframework.boot:spring-boot-starter-test:2.6.3")
 }
