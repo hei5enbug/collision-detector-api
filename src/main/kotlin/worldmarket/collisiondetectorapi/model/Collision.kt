@@ -1,6 +1,7 @@
 package worldmarket.collisiondetectorapi.model
 
 import com.fasterxml.jackson.annotation.JsonFormat
+import org.jetbrains.annotations.NotNull
 import org.springframework.data.annotation.CreatedDate
 import org.springframework.data.jpa.domain.support.AuditingEntityListener
 import java.time.LocalDateTime
@@ -19,10 +20,10 @@ data class Collision(
     @Column(name = "detection_time")
     var detectionTime: LocalDateTime? = null,
 
-    @Column(name = "acc_x") val accX: Double,
-    @Column(name = "acc_y") val accY: Double,
-    @Column(name = "acc_z") val accZ: Double,
-    @Column(name = "gyro_x") val gyroX: Double,
-    @Column(name = "gyro_y") val gyroY: Double,
-    @Column(name = "gyro_z") val gyroZ: Double,
+    @Column(name = "acc_x") @NotNull val accX: Double,
+    @Column(name = "acc_y") @NotNull val accY: Double,
+    @Column(name = "acc_z") @NotNull val accZ: Double,
+    @Column(name = "gyro_x") @NotNull val gyroX: Double,
+    @Column(name = "gyro_y") @NotNull val gyroY: Double,
+    @Column(name = "gyro_z") @NotNull val gyroZ: Double,
 )
